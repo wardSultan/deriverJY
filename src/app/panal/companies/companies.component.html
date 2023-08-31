@@ -1,0 +1,182 @@
+<div class="main-content">
+  <div class="head">
+    <div class="row">
+      <div class="col-lg-6 col-sm-12 copmany">
+        <img src="../../../assets/panal/Companies/User.svg" alt="" /> &nbsp;
+        Companies
+      </div>
+      <div class="col-lg-6">
+        <div class="row flex-pos">
+          <div class="col-lg-6 col-md-6 col-sm-6 copmany add">
+            <img src="../../../assets/panal/Companies/plus.svg" alt="" /> &nbsp;
+            Add company
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6 copmany profile">
+            <img
+              src="../../../assets/panal/Companies/chevron-down.svg"
+              alt=""
+            />
+            &nbsp; &nbsp;
+            <span>
+              <span class="name">{{ user.name }}</span> <br />
+              <span class="role">{{ user.role }}</span>
+            </span>
+            <img [src]="user.img" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="head">
+    <div class="row">
+      <div class="col-sm-12 col-lg-2 left-side gray-back">
+        <div
+          class="chose-company"
+          *ngFor="let company of companies; let i = index"
+          [ngClass]="{ selected: selectedCompanyIndex === i }"
+          (click)="selectCompany(company, i)"
+        >
+          <p><img [src]="company.logo" alt="" />&nbsp; {{ company.name }}</p>
+        </div>
+      </div>
+      <div class="col-lg-10 col-md-12 col-sm-12 right-side gray-back">
+        <div class="row des">
+          <div class="col-lg-5 col-md-12 col-sm-12">
+            <div class="row">
+              <div class="col-lg-6 col-md-12 col-sm-12">
+                <h6 class="move-des">Destinations</h6>
+              </div>
+              <div class="col-lg-6 col-md-12 col-sm-12">
+                <div class="from-to">
+                  <span>From</span>
+                  <img
+                    src="../../../assets/panal/Companies/Component 1.svg"
+                    alt=""
+                  />
+                  <span>To</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2 col-12-sm"></div>
+          <div class="col-lg-5">
+            <div class="end row">
+              <div class="col search">
+                <input type="search" placeholder="Search..." />
+                <img src="../../../assets/panal/Companies/search.svg" alt="" />
+              </div>
+              <div class="col">
+                <div class="new-trip">
+                  <img src="../../../assets/panal/Companies/plus2.svg" alt="" />
+                  <span>New Trip</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div
+            class="cities"
+            *ngFor="let city of cities; let i = index"
+            [ngClass]="{ selectedCity: selectedCityIndex === i }"
+            (click)="selectCity(i)"
+          >
+            <span>{{ city }}</span>
+          </div>
+        </div>
+        <div class="row des">
+          <div class="trip">
+            <div class="col-10">
+              <h6 class="trip-item1">Trips</h6>
+            </div>
+            <div class="col">
+              <div class="trip-item2">
+                <span>Today</span>
+              </div>
+            </div>
+            <div class="col">
+              <div class="trip-item2">
+                <div class="filter">
+                  <span>Filter</span>
+                  <img
+                    src="../../../assets/panal/Companies/chevron-down.svg"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div *ngIf="selectedCompany" class="col">
+            <div
+              class="row jour"
+              *ngFor="let trip of selectedCompany?.trips; let i = index"
+              [ngClass]="{ selectedTrip: selectedTripIndex === i }"
+              (click)="selectTrip(i)"
+            >
+              <div class="col-1">
+                <span class="time">{{ trip.start }} </span>
+                <p class="city-from-to">{{ trip.from }}</p>
+              </div>
+              <!-- <h3>
+                ward {{ calculateTripDuration(trip.start, trip.end).minutes }}
+              </h3> -->
+              <div class="col-10">
+                <img
+                  width="45%"
+                  src="../../../assets/panal/Companies/Vector 52.png"
+                  alt=""
+                />
+                <img
+                  width="4%"
+                  height="16px"
+                  src="../../../assets/panal/Companies/uil_bus.svg"
+                  alt=""
+                />
+                <span class="city-from-to duration">{{
+                  calculateTripDuration(trip.start, trip.end).hours +
+                    "h" +
+                    " " +
+                    calculateTripDuration(trip.start, trip.end).minutes +
+                    "m"
+                }}</span>
+                <img
+                  width="45%"
+                  src="../../../assets/panal/Companies/Vector 53.png"
+                  alt=""
+                />
+              </div>
+              <div class="col-1">
+                <span class="time">{{ trip.end }}</span>
+                <p class="city-from-to">{{ trip.to }}</p>
+              </div>
+              <hr />
+              <div class="row seats-price">
+                <div class="col">
+                  <p class="seats">{{ trip.seats }} Seats available</p>
+                </div>
+                <div class="col">
+                  <p class="price">SP {{ trip.cost }}</p>
+                </div>
+              </div>
+              <span *ngIf="indexOfTripSelected == i" class="note"
+                ><span class="note-hover">Book a seat</span>
+                <span class="note-hover">View details</span>
+                <span class="note-hover">Delete</span>
+              </span>
+            </div>
+          </div>
+
+          <div
+            *ngIf="!selectedCompany"
+            class="col text-center align-self-center"
+          >
+            <h2>Select a company !! to see its Trips.</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

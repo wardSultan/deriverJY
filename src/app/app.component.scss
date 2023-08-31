@@ -1,0 +1,55 @@
+.logo {
+  padding-left: 15px;
+  padding-top: 15px;
+  @media (max-width: 992px) {
+    text-align: center;
+    margin-top: 1rem;
+  }
+}
+
+.sidebar-icon {
+  margin-left: 2rem;
+  @media (max-width: 992px) {
+    margin-top: 2rem;
+  }
+}
+
+.dash {
+  color: #cccccc;
+}
+.company {
+  border-radius: 8px;
+
+  width: 171px;
+  height: 36px;
+  padding: 5px;
+  color: #cccccc;
+  text-decoration: none;
+}
+.left-flex {
+  margin-top: 2rem;
+  display: flex;
+  padding: 10px 24px;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.bus {
+  display: flex;
+  width: 171px;
+  height: 36px;
+  padding: 10px 16px;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #cccccc;
+  white-space: nowrap;
+}
+.active {
+  background: #01b9c4;
+}
+.my-custom-container {
+  overflow-x: hidden;
+}

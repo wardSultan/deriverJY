@@ -1,0 +1,366 @@
+.head {
+  position: relative;
+  border-radius: 16px;
+  background-color: #fff;
+  height: auto;
+  padding: 8px 15px;
+  margin: 6px 11px;
+}
+.copmany {
+  @media (max-width: 992px) {
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  align-items: center;
+  display: flex;
+  height: 48px;
+}
+.main-content {
+  position: relative;
+  padding-top: 1px;
+  margin-top: 1rem;
+  border-radius: 16px;
+  background: #f9f9f9;
+}
+
+.profile {
+  cursor: pointer;
+  display: flex;
+  padding: 8px 12px;
+  width: 211px;
+  justify-content: space-between;
+
+  border-radius: 10px;
+  background: #f9faff;
+  span.role {
+    color: #787878;
+    font-family: "Montserrat";
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+  }
+  span.name {
+    color: #4e4e4e;
+    font-family: "Montserrat";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+  }
+}
+
+.flex-pos {
+  display: flex;
+  justify-content: end;
+  @media (max-width: 992px) {
+    justify-content: center;
+  }
+}
+.add {
+  border-radius: 10px;
+  background: #e9f8ff;
+  display: flex;
+  justify-content: center;
+  white-space: nowrap;
+  width: 149px;
+  margin-right: 13px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+.gray-back {
+  border-radius: 16px;
+  background: #f9f9f9;
+}
+.left-side {
+  margin-right: 8px;
+  padding: 5px 5px;
+  height: 626px;
+  @media (max-width: 992px) {
+    height: 250px;
+  }
+  overflow: auto;
+}
+.right-side {
+  width: 82%;
+  @media (max-width: 992px) {
+    width: 100%;
+  }
+}
+
+.left-side::-webkit-scrollbar {
+  width: 4px;
+  height: 167px;
+}
+
+.left-side::-webkit-scrollbar-thumb {
+  border-radius: 11px;
+  background: #ff9c06;
+}
+
+.left-side::-webkit-scrollbar-track {
+  border-radius: 11px;
+  background: #ffefd7;
+}
+.chose-company {
+  cursor: pointer;
+  padding: 3px;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  height: 36px;
+}
+.chose-company:hover {
+  background: #ffefd7;
+
+  p {
+    color: #ff9c06;
+  }
+}
+
+.selected {
+  background: #ffefd7;
+
+  p {
+    color: #ff9c06;
+  }
+}
+.des {
+  margin: 1rem 0px;
+}
+.from-to {
+  display: flex;
+  height: 40px;
+  padding: 10px;
+  width: 214px;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  border-radius: 10px;
+  background: #fff;
+  @media (max-width: 992px) {
+    margin: 1rem 0;
+    margin-left: 1rem;
+  }
+  span {
+    color: var(--eco-colors-grey-20, #ccc);
+    font-family: "Montserrat";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
+
+.end {
+  display: flex;
+  justify-content: space-around;
+}
+.move-des {
+  @media (max-width: 992px) {
+    text-align: center;
+    margin: 1rem 0;
+  }
+
+  margin-top: 10px;
+}
+.search {
+  display: flex;
+  width: 129px;
+  height: 40px;
+  padding: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 10px;
+  border-radius: 10px;
+  background: #fff;
+  position: relative;
+
+  input {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+    border: none;
+    width: 109px;
+    height: 16px;
+    margin-left: 20px;
+  }
+  :focus {
+    outline: none;
+    border-color: transparent;
+  }
+  img {
+    position: absolute;
+    margin-right: 1px;
+  }
+}
+.new-trip {
+  cursor: pointer;
+  display: flex;
+  height: 40px;
+  padding: 8px 12px;
+  align-items: center;
+  gap: 8px;
+  border-radius: 10px;
+  background: #01b9c4;
+  span {
+    color: #fff;
+    font-family: "Montserrat";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+  }
+}
+.cities {
+  cursor: pointer;
+  display: flex;
+  width: 93px;
+  padding: 2px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  margin: 10px;
+  align-self: stretch;
+  border-radius: 8px;
+  background: #fff;
+  span {
+    color: var(--eco-colors-grey-20, #ccc);
+    font-family: "Montserrat";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+  }
+}
+.selectedCity {
+  background: #ff9c06;
+  box-shadow: 0px 10px 15px 0px rgba(255, 156, 6, 0.22);
+  span {
+    color: #ffffff;
+  }
+}
+.trip {
+  @media (max-width: 992px) {
+    justify-content: unset !important;
+    display: block;
+  }
+  display: flex;
+  justify-content: space-between;
+}
+.trip-item1 {
+  align-self: flex-start;
+}
+
+.trip-item2 {
+  align-self: flex-end;
+  span {
+    color: #303030;
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: "Montserrat";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.15px;
+  }
+}
+
+.filter {
+  cursor: pointer;
+  display: flex;
+  height: 40px;
+  padding: 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px;
+  background: #fff;
+}
+.jour {
+  display: flex;
+  padding: 8px 16px;
+  align-items: flex-start;
+  border-radius: 8px;
+  border: 1px solid #fff3e1;
+  cursor: pointer;
+  position: relative;
+  background: #fff;
+  margin: 1rem 2px;
+}
+.time {
+  color: var(--eco-colors-grey-80, #333);
+  font-family: "Montserrat";
+  font-size: 12px;
+  font-style: normal;
+  white-space: nowrap;
+  font-weight: 700;
+  line-height: 140%;
+  letter-spacing: -0.24px;
+}
+.city-from-to {
+  color: var(--eco-colors-grey-40, #999);
+  font-family: "Montserrat";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: -0.24px;
+}
+.seats {
+  align-self: flex-start;
+  color: #fe9c07;
+  font-family: "Montserrat";
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%;
+  letter-spacing: -0.24px;
+}
+.price {
+  display: flex;
+  justify-content: end;
+  color: #ff9c06;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 140%;
+  letter-spacing: -0.24px;
+}
+.selectedTrip {
+  border: 1px solid #ff9c06;
+}
+.note {
+  display: flex;
+  width: 176px;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  position: absolute;
+  left: 75px;
+  top: 88px;
+  z-index: 1;
+  border-radius: 16px;
+  border: 1px solid #01b9c4;
+  background: #fff;
+  box-shadow: 0px 28px 32px 0px rgba(0, 0, 0, 0.11);
+}
+.note-hover {
+  width: 174px;
+  height: 47px;
+  border-radius: 15px 15px 0px 0px;
+  left: 1px;
+  top: 1px;
+}
+.note-hover:hover {
+  color: #01b9c4;
+  background-color: #e9f8ff;
+}
+.duration {
+  position: absolute;
+  transform: translate(-25px, 23px);
+}

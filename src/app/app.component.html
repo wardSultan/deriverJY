@@ -1,0 +1,45 @@
+<div class="my-custom-container m-0">
+  <div class="row">
+    <div *ngIf="checkAuth()" class="col-lg-2 col-md-4 col-sm-12">
+      <div class="row logo">
+        <div class="col-lg-6 col-12">
+          <img src="../../assets/panal/Frame.svg" alt="" />
+        </div>
+        <div class="col-lg-6 col-12">
+          <img
+            class="sidebar-icon"
+            src="../../assets/panal/sidebar.svg"
+            alt=""
+          />
+        </div>
+  
+      </div>
+      <div class="left-flex">
+        <p class="dash">
+          <img src="../../assets/panal/bxs_dashboard.svg" alt="" /> Dashboard
+        </p>
+
+        <a class="company" routerLink="/companies" routerLinkActive="active"
+          ><img src="../../assets/panal/User.svg" alt="" /> Companies</a
+        >
+        <a class="bus" routerLink="/bus" routerLinkActive="active"
+          ><img src="../../assets/panal/ri_bus-fill.svg" alt="" /> Bus &
+          Layouts</a
+        >
+        <a class="bus" routerLink="/notifications" routerLinkActive="active"
+          ><img src="../../assets/panal/Notification.svg" alt="" />
+          Notifications</a
+        >
+        <a class="bus" routerLink="/profile" routerLinkActive="active"
+          ><img src="../../assets/panal/Profile.svg" alt="" /> Profile</a
+        >
+        <a class="bus" routerLink="/inbox" routerLinkActive="active"
+          ><img src="../../assets/panal/Message.svg" alt="" /> Inbox</a
+        >
+      </div>
+    </div>
+    <div class="col">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

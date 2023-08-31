@@ -1,0 +1,77 @@
+<div class="container my-custom-container m-0" *ngIf="checkAuth()">
+  <div class="row">
+    <div class="col-lg-6 col-md-12 col-sm-12">
+      <div class="parent-image">
+        <img width="100%" src="../../assets/login/Rectangle.png" alt="" />
+        <div class="logo"></div>
+        <div class="building"></div>
+        <div class="bus"></div>
+        <div class="path"></div>
+      </div>
+    </div>
+    <div class="col-lg-6 col-md-12 col-sm-12">
+      <div class="bth">
+        <img
+          class="back-logo"
+          src="../../assets/login/chevron-down.svg"
+          alt=""
+        />
+        <span>Back to home</span>
+      </div>
+
+      <div class="form">
+        <div><h3>Login</h3></div>
+        <br />
+        <div class="icon-pos">
+          <label for="email"> Email </label>
+          <input
+            name="email"
+            type="email"
+            value="Ex: Ward@info.com"
+            class="form-control"
+          />
+        </div>
+
+        <br />
+
+        <div class="icon-pos">
+          <label for="password"> Password </label>
+          <input
+            name="password"
+            type="password"
+            id="myInput"
+            class="form-control"
+          />
+
+          <span class="pass" (click)="showPassword()"
+            ><img class="pass-icon" src="../../assets/login/ICONS.svg" alt=""
+          /></span>
+        </div>
+
+        <br />
+
+        <div class="same-line">
+          <label for="checkbox">
+            <input id="checkbox" type="checkbox" />&nbsp;&nbsp;&nbsp;
+            <span class="remember">Remember me</span>
+          </label>
+          <span class="forgot">Forgot Password?</span>
+        </div>
+
+        <div class="submit">
+          <button
+            class="login-btn"
+            type="submit"
+            name="login"
+            (click)="login()"
+          >
+            <p class="login-content">login</p>
+          </button>
+          <br />
+          <br />
+          <br />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
