@@ -15,7 +15,7 @@ export class LoginComponent implements OnInit {
   }
 
   showPassword() {
-    var x = document.getElementById('myInput') as HTMLInputElement;
+    var x = document.getElementById('password') as HTMLInputElement;
     if (x.type === 'password') {
       x.type = 'text';
     } else {
